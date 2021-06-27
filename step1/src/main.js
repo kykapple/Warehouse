@@ -96,7 +96,6 @@ const render = function() {
  */
 const deleteItem = function(event) {
   const delBtn = event.target;
-  console.log(delBtn.id);
 
   todoItems.items = todoItems.items.filter(function(obj) {                    // 삭제 버튼을 누른 아이템을 제외하기 위한 filter
     return obj.id !== Number(delBtn.id);
@@ -112,7 +111,6 @@ const deleteItem = function(event) {
  const modifyItem = function(event) {
   const modBtn = event.target;
 
-  console.log("emfdha");
   todoItems.seletedItem = modBtn.id;                                          // 수정 버튼을 누른 아이템을 selectedItem을 통해 체크
   render();
   setBtnHandler();
