@@ -98,8 +98,8 @@
 		<property name="username" value="sa"></property>
 		<property name="password" value=""></property>
 	</bean>
-  
-  	<!-- SqlsessionFactory 객체 생성을 위한 SqlSessionFactoryBean객체 생성 -->
+ 
+ 	<!-- SqlsessionFactory 객체 생성을 위한 SqlSessionFactoryBean객체 생성 -->
 	<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="configLocation" value="classpath:sql-map-config.xml"></property>
