@@ -17,7 +17,7 @@
 
 ## Mybatis의 실행 과정
   - SqlSessionFactoryBuilder클래스의 객체를 생성하고, build()메소드를 통해 Mybatis 설정 파일을 인자로 하여(로딩하여) 호출하면 SqlsessionFactory 객체가 생성된다.
-     - 여기서 Mybatis 설정 파일은 어떤 DBMS와 connection을 맺을지, SQL Mapping 파일로는 어떤 것들이 있는지 알 수 있고, Mybatis는 Sql Mapping 파일에 등록된 각 SQL 명령어들을 Map 구조로 저장하여 관리한다. 각 SQL 명렁어는 고유한 아이디 값을 가지고 있으므로 아이디를 통해 SQL을 실행할 수 있다.
+     - 여기서 Mybatis 설정 파일은 어떤 DBMS와 connection을 맺을지, SQL Mapping 파일로는 어떤 것들이 있는지 설정되어 있고, Mybatis는 SQL Mapping 파일에 등록된 각 SQL 명령어들을 Map 구조로 저장하여 관리한다. 그리고 각 SQL 명렁어는 고유한 아이디 값을 가지고 있으므로 아이디를 통해 SQL을 실행할 수 있다.
     
   - 생성된 SqlSessionFactory 객체에서 openSession()을 호출하면 SQL 실행 API를 제공하는 SqlSession 객체가 생성된다. 
   
@@ -91,7 +91,7 @@
   
   - SqlSessionFactoryBean과 SqlSessionTemplate 생성 참고
   ```
-  <!-- DataSource 설정 -->
+  	<!-- DataSource 설정 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="org.h2.Driver"></property>
 		<property name="url" value="jdbc:h2:tcp://localhost/~/test"></property>
@@ -99,7 +99,7 @@
 		<property name="password" value=""></property>
 	</bean>
   
-  <!-- SqlsessionFactory 객체 생성을 위한 SqlSessionFactoryBean객체 생성 -->
+  	<!-- SqlsessionFactory 객체 생성을 위한 SqlSessionFactoryBean객체 생성 -->
 	<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="configLocation" value="classpath:sql-map-config.xml"></property>
