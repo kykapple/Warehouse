@@ -23,7 +23,7 @@
   
   - SqlSession 객체는 Sql Mapper 파일에 등록된 쿼리들을 실행하기 위한 API를 제공한다. SqlSession 객체는 Thread-safe하지 않으므로 thread마다 필요에 따라 각각 생성한다.
     - 제공하는 API로는 다음과 같은 것들이 있다.
-    ```
+    ```java
     - public Object selectOne(String query, Object param): 하나의 데이터 검색
     - public List selectList(String query, Object param): 여러 개의 데이터 검색
     - public int insert(String query, Object param): insert작업(몇 개 insert 했는지 리턴)
@@ -54,7 +54,7 @@
       - SqlSessionFactoryBean과 SqlSessionTemplate가 그와 같은 역할을 한다.
       - 여기서 SqlSessionFactoryBean은 SqlSessionFactory를 생성해주고, 이 SqlSessionFactory를 기반으로 해서 SqlSessionTemplate이 만들어지게 된다.
   - 수동 SqlSessionFactoryBean 참고
-  ```
+  ```java
   public class SqlSessionFactoryBean { 
       private static SqlSessionFactory sessionFactory = null; 
       
