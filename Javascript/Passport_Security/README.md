@@ -68,7 +68,7 @@ module.exports = () => {
             .catch(err => done(err))
     });
 
-    local();
+    local();                                        // 로컬 전략 
 };
 ```
 
