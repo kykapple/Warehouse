@@ -29,6 +29,8 @@ const passportConfig = require('./passport/index.js')   // passport.serializeUse
 
 passportConfig();                 // passport 설정 -> passport.serializeUser(), passport.deserializeUser() 등록
 
+// 이 session함수를 실행시키면 session이 시작되는 것이고, express-session 미들웨어가 내부적으로 개입해서 내 애플리케이션이 session을 사용할 수 있도록 해준다.
+// 그리고 session을 호출할 때 전달하는 이 객체에 따라서 session의 기본 동작을 바꿀 수 있다.
 app.use(session({
   secret: 's_e-c%r*e/t#k)e!y',    // 이 값을 이용해 세션을 암호화해서 저장
   resave: false,                  // 요청이 올 때 세션에 수정 사항이 생기지 않더라도 세션을 다시 저장할지 확인하는 옵션
