@@ -1,0 +1,7 @@
+.idea
+bin
+config
+migrations
+node_modules
+seeders
+views

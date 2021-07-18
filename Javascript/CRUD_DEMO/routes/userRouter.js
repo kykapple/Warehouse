@@ -6,6 +6,16 @@ const db = require('../models/index');
 
 const router = express.Router();
 
+router.get('/what', async (req, res) => {
+    console.log("emfdha");
+    const user = await User.findOne({
+        include: {
+            model: Comment,
+        }
+    });
+    res.json(user);
+});
+
 router.route('/')
     .get(async (req, res) => {
        const users = await User.findAll();
@@ -38,12 +48,19 @@ router.delete('/:id', async (req, res) => {
 });
 
 router.get('/:id/comments', async (req, res) => {
-    const comments = await Comment.findAll({
+    // const comments = await Comment.findAll({
+    //     include: {
+    //         model: User,
+    //         where: { id: req.params.id }
+    //     }
+    // });
+
+    const user = await User.findOne({
         include: {
-            model: User,
-            where: { id: req.params.id }
+            model: Comment,
         }
     });
+    res.json(user);
 
     // 해당 id의 user를 select해오고, 그 user에 getComments()를 하면 시퀄라이즈가 자동으로 join해서 comment를 가져온다.
     // const user = await User.findOne({
@@ -63,7 +80,7 @@ router.get('/:id/comments', async (req, res) => {
     // const result = await db.sequelize.query("select * from users users inner join comments comments on users.id = comments.commenter ");
     // res.json(result);
 
-    res.json(comments);
+    // res.json(comments);
 
 });
 

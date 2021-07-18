@@ -19,7 +19,7 @@ app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
 app.set('views', __dirname + '/public');
 
-sequelize.sync({ force: false })    // force: true이면 서버 실행 시마다 테이블을 재생성함.
+sequelize.sync({ force: true })    // force: true이면 서버 실행 시마다 테이블을 재생성함.
     .then(() => {
     console.log('db 연결 성공');
     })
