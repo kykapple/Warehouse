@@ -2,7 +2,8 @@
 
 ## Travis CI, S3, CodeDeploy, EC2를 이용한 CI/CD 구축
 - 설계도
-![undefined](https://user-images.githubusercontent.com/76088639/125245779-edf09d00-e32b-11eb-94aa-364867b892c5.png)
+![AWS CI_CD BASIC](https://user-images.githubusercontent.com/76088639/126095868-afb9ac80-63d2-4562-8c58-49695fed6378.png)
+
 
 - github push 발생 시 Travis CI로 프로젝트가 전송되고 test 및 build가 수행된다.
 - Travis CI는 S3에 빌드된 파일을 전달한다.

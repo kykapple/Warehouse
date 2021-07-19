@@ -35,7 +35,6 @@
   
   - SqlSession은 SQL Mapping 파일에서 실행할 SQL문을 실행해준다.
 
-위의 설명이 아래 그림의 빨간 박스 부분이고, Mybatis는 그 이후의 JDBC를 통해 DB에 접근하는 작업도 추상화해준다!
 ![image](https://user-images.githubusercontent.com/76088639/123593322-55392800-d829-11eb-8435-23223f6f681a.png)
 
 ## JDBC를 통해 DB에 접근하는 과정
