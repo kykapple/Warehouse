@@ -5,3 +5,4 @@ migrations
 node_modules
 seeders
 views
+package-lock.json
