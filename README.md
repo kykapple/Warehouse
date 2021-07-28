@@ -5,7 +5,7 @@
 
 ### 구현 방식
 
-- [x] ClassifierAlpha와 PrimeAlpha 함수형 리팩토링
+- [X] ClassifierAlpha와 PrimeAlpha 함수형 리팩토링
 - 순수 함수의 불변성
   - 어떠한 위치에서도 전달 받은 값을 직접적으로 변경하지 않는다.
 
