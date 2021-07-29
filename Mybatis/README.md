@@ -116,3 +116,4 @@
   - 그렇다면 SqlSession을 개발자들이 좀 더 편리하게 사용할 수 있도록 wrapping한 SqlSessionTemplate은 어떠한 차이점이 있을까?
       - SqlSessionTemplate은 Thread-safe하지 않은 SqlSession과는 다르게 Thread-safe하다. 
       - 즉, SqlSession은 Thread-safe하지 않기 때문에 매번 요청이 올 때마다 새로 객체를 생성해야하는 반면에 SqlSessionTemplate은 Thread-safe하기 때문에 멀티 쓰레드 환경에서 개발자가 편리하게 사용할 수 있다.
+
