@@ -31,7 +31,12 @@
 - 이제 ```upstream/J009```, ```origin/J009```, ```로컬의 J009```의 커밋 로그가 모두 일치한다.
 - 여기서부터 다시 로컬에서 ```git checkout -b feature```로 기능 구현을 위한 브랜치를 생성해서 위의 과정을 반복한다.
 
-
+### 화요일 merge 이후 시도해볼 점
+- ```git fetch upstream J009```로 ```upstream J009`커밋 로그 가져오기
+- ```git log --all --oneline```으로 커밋 로그 확인 후. ```git rebase upstream/J009```로 ```로컬의 J009```커밋 로그를 맞춰주기
+- ```git push origin J009```를 통해 내 원격 레포지토리의 ```J009``` 브랜치 커밋 로그 맞춰주기
+- 이 상태에서 ```git checkout -b feature```로 기능 구현 브랜치 생성하기
+- ```git log```로 커밋 로그 다시 확인해보기!
 
 
 
