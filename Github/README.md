@@ -17,8 +17,17 @@
 - 최초 한번만 ```git remote add -t J009 upstream https://github.com/boostcamp/project.git``` 을 통해 ```upstream/J009``` 브랜치를 가져오도록 한다.
 - 로컬에서 ```git fetch upstream J009```를 하여 ```upstream/J009```의 커밋 로그를 가져와 갱신한다.
 - 현재는 ```upstream/J009```브랜치가 ```origin/J009```와 ```로컬의 J009```보다 앞서있다.
+
+![image](https://user-images.githubusercontent.com/76088639/131218237-72122f2a-090c-4a3c-a115-5c9192d46e90.png)
+
 - 따라서 ```git rebase upstream/J009```를 통해 ```로컬의 J009```와 ```upstream의 J009``` 커밋 로그를 맞춰주도록 한다.
+
+![image](https://user-images.githubusercontent.com/76088639/131218252-0ca3d688-2f61-425b-8b2e-8600fdc810b4.png)
+
 - 그 후, ```git push origin J009```를 통해 내 원격 레포지토리의 ```J009``` 브랜치에도 커밋 로그를 반영해준다.
+
+![image](https://user-images.githubusercontent.com/76088639/131218264-9fe2b879-a6e5-4ec4-918b-8495f85b3122.png)
+
 - 이제 ```upstream/J009```, ```origin/J009```, ```로컬의 J009```의 커밋 로그가 모두 일치한다.
 - 여기서부터 다시 로컬에서 ```git checkout -b feature```로 기능 구현을 위한 브랜치를 생성해서 위의 과정을 반복한다.
 
