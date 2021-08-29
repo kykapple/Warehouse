@@ -1,6 +1,8 @@
-# Warehouse
-<<<<<<< HEAD
+### backend
+- redis 구축
+    - 데이터 정의 
 
-=======
-warehouse
->>>>>>> b3fced34739c28ba221be6ddaaa06d05f4997ff9
+----|----|----
+a   | b  |c
+
+- CRUD 구현
