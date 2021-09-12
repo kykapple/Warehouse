@@ -17,7 +17,7 @@ app.use('/comments', commentRouter);
 
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
-app.set('views', __dirname + '/public');
+app.set('views', path.join(__dirname, '/public'));
 
 sequelize.sync({ force: true })    // force: true이면 서버 실행 시마다 테이블을 재생성함.
     .then(() => {
