@@ -43,5 +43,5 @@ notify() {
 }
 ```
 
-처음에는 `handleCategoryClick();` 메서드에서 `Router.setPage('/');` 코드 없이 `Observable.setState('category', $category.innerHTML);` 만으로 구현을 하였습니다. 그런데 `Observable.setState('category', $category.innerHTML);`만 사용하여 구현하면 `/category` 경로에서 화면을 구성하는 컴포넌트만 변경되어 history가 쌓이지 않는 문제가 발생하였습니다. 그래서 `Router.setPage('/');`를 사용하여 `/` 경로(메인 페이지)로 라우팅을 해주었는데, 이렇게 `Router.setPage('/');` 코드와 `Observable.setState('category', $category.innerHTML);` 코드를 둘 다 사용하면 렌더링이 2번 발생하게 되는데, Observable의 상태와 history를 모두 처리할 수 있는 방법에 대해서 조언을 구하고 싶습니다..!
+처음에는 `handleCategoryClick();` 메서드에서 `Router.setPage('/');` 코드 없이 `Observable.setState('category', $category.innerHTML);` 만으로 구현을 하였습니다. 그런데 `Observable.setState('category', $category.innerHTML);`만 사용하여 구현하면 `/category` 경로에서 화면을 구성하는 컴포넌트만 변경되어 history가 쌓이지 않는 문제가 발생하였습니다. 이로 인해 이후 다른 페이지로 이동 시 뒤로 가기가 올바르게 동작하지 않았고, 이를 해결하기 위해 `Router.setPage('/');`를 사용하여 `/` 경로(메인 페이지)로 라우팅을 해주었습니다. 하지만 이렇게 `Router.setPage('/');` 코드와 `Observable.setState('category', $category.innerHTML);` 코드를 모두 사용하게 되면 렌더링이 2번 발생하게 되는데, Observable의 상태와 history를 모두 처리할 수 있는 방법에 대해서 조언을 구하고 싶습니다..!
 
