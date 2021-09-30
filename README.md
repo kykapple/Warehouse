@@ -15,7 +15,7 @@ handleCategoryClick(target) {
 ```
 
 - Observable.setState()
-```
+```javascript
 setState(key, newState) {
         if(!key in this.store) {
             throw Error('존재하지 않는 값입니다.');
@@ -31,7 +31,7 @@ setState(key, newState) {
 ```
 
 - Router.setPate();
-```
+```javascript
 setPage(newState) {
     this.state = newState;
     history.pushState({}, newState, location.origin + newState);
