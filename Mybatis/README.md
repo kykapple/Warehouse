@@ -6,7 +6,7 @@
 ## Mybatis의 주요 컴포넌트와 역할
  - Mybatis 설정 파일
       - 데이터베이스의 접속 정보나 SQL Mapping 파일의 경로 등 설정 정보를 담고 있다.
- - SqlSessionFactory
+ - SqlSessionFactoryBuilder
       - Mybatis 설정 파일을 바탕으로 SqlSessionFactory를 생성한다.
  - SqlSessionFactory
       - SqlSession을 생성한다.
