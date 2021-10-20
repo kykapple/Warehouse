@@ -13,6 +13,7 @@ passport.use(new LocalStrategy({
     passwordField: 'password',
     },
     async (id, password, done) => {
+        console.log(id);
         try {
             const user = await User.findOne({
                 where: { id: id }
@@ -29,7 +30,6 @@ passport.use(new LocalStrategy({
 
             return done(null, false, { message: '비밀번호가 일치하지 않습니다. '});
         } catch(error) {
-            console.log(error);
             return done(error);
         }
     })
