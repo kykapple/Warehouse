@@ -14,8 +14,8 @@
 
 ### 데모영상
 https://user-images.githubusercontent.com/76088639/138380192-5842e9de-e85e-4bb8-a12b-de7d76c2e355.mp4
-<br/>
 
+<br/>
 ### 인프라
 ![NCP CI_CD](https://user-images.githubusercontent.com/76088639/138208610-4688ee63-46bb-4b9a-974a-3772e2c73afc.png)
 
